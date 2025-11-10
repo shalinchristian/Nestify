@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #001f3d;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    background: #002f5f;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgb(37, 32, 32);
+    width: 380px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-container{
+    display: flex;
+    width: 200%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.form {
+    width: 50%;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.form h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f4f4f4;
+    font-size: 16px;
+    outline: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4db8ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background: #3399e6;
+}
+
+.form p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.container.active .form-container {
+    transform: translateX(-50%);
+}
+
+.login-form {
+    opacity: 1;
+}
+
+.signup-form {
+    opacity: 0;
+}
+
+.container.active .login-form {
+    opacity: 0;
+}
+
+.container.active .signup-form {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 200%;
+        display: flex;
+    }
+}
