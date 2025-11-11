@@ -18,9 +18,3 @@ Nestify is a comprehensive PHP-based application designed to facilitate the mana
 - **JavaScript:** Frontend interactivity.
 - **MySQL:** Database management.
 - **PHPMailer:** Email handling for notifications.
-
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/shalinchris/Nestify.git
-  
