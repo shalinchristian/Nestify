@@ -1,7 +1,6 @@
 <?php
-/**
- * Replaces the old (uncommitted) Agent/db.php, User/db.php and User/fdb.php.
- * Exposes $conn (mysqli) exactly like the old files did.
+/*
+ * database connection used by every page. gives $conn (mysqli)
  */
 mysqli_report(MYSQLI_REPORT_OFF);
 $conn = new mysqli(

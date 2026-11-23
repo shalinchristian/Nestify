@@ -1,9 +1,9 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
-/**
- * Single place for SMTP settings (previously copy-pasted in Signup, Agent_Signup,
- * resend_otp and forget_password, the last one with placeholder credentials).
+/*
+ * smtp settings in one place so signup, agent signup, resend otp and
+ * forgot password all use the same ones
  */
 function nestify_mailer(string $fromName = 'Nestify OTP System'): PHPMailer {
     $mail = new PHPMailer(true);

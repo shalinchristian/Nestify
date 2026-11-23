@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $availability = htmlspecialchars(trim($_POST["availability"]));
 
     $uploaded_images = [];
-    $upload_directory = UPLOAD_PATH . "/"; // public/uploads (served at /uploads/...)
+    $upload_directory = UPLOAD_PATH . "/"; // public/uploads, shows up at /uploads/...
 
     // Ensure the uploads directory exists
     if (!is_dir($upload_directory)) {

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["property_id"])) {
     // Handle Image Uploads - Store Only New Images
     $image_paths = [];
     if (!empty($_FILES['property_images']['name'][0])) {
-        $upload_dir = "uploads/"; // stored (public) path prefix; files live in public/uploads
+        $upload_dir = "uploads/"; // path saved in db, the files are in public/uploads
 
         foreach ($_FILES['property_images']['tmp_name'] as $key => $tmp_name) {
             $file_name = basename($_FILES['property_images']['name'][$key]);

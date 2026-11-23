@@ -30,7 +30,7 @@ if ($stmt->execute()) {
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = "Your OTP Code";
-        $mail->Body = RegenerateOtpEmailBody($new_otp); // Fixed variable name
+        $mail->Body = RegenerateOtpEmailBody($new_otp); // send the new otp
 
         if ($mail->send()) {
             $_SESSION['message'] = 'OTP sent successfully. Please check your email.';

@@ -1,8 +1,8 @@
 <?php
-/**
- * Prepared-statement helper used wherever SQL used to be built by string
- * interpolation. Returns mysqli_result for SELECTs, bool otherwise, so it is a
- * drop-in replacement for mysqli_query($conn, $sql).
+/*
+ * small helper for prepared statements, so sql isn't built by joining strings.
+ * gives back a mysqli_result for SELECT and true/false for the rest, same as
+ * mysqli_query($conn, $sql), so it can be used in the same places.
  *
  *   db_query($conn, "SELECT * FROM cart WHERE user_id = ?", "i", $userId);
  */

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $mobile = trim($_POST["mobile"]);
     $password = trim($_POST["password"]);
-    $otp = rand(1000, 9999); // 6-digit OTP
+    $otp = rand(1000, 9999); // 4 digit OTP
 
     if (empty($fullname) || empty($certificate_no) || empty($email) || empty($mobile) || empty($password)) {
         exit("All fields are required!");

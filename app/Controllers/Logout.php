@@ -1,5 +1,5 @@
 <?php
-// Shared logout for both roles (was Agent/Logout.php and User/Logout.php).
+// logout for both users and agents
 if (session_status() === PHP_SESSION_NONE) session_start();
 session_unset();
 session_destroy();
